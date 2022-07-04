@@ -1,0 +1,66 @@
+\documentclass[a4paper, 10pt]{report}
+\usepackage[top=3cm, bottom=3cm, left=2cm, right=2cm]{geometry}
+
+\usepackage{fancyhdr}
+\newcommand{\refresh}{
+	\pagestyle{fancy}
+	\fancyhf{}
+	\lhead{\thepage}
+}
+
+% Setup Translations
+\usepackage[english]{babel} \newcommand\en[1]{#1} \newcommand\tr[1]{} %% Enable english
+% \usepackage[turkish]{babel} \newcommand\tr[1]{#1} \newcommand\en[1]{} %% Enable turkish
+
+\usepackage{asymptote}
+
+\usepackage{amsmath, amssymb}
+
+\usepackage{import}
+
+\usepackage{hyperref}
+\hypersetup{
+	linktoc = all,
+}
+
+\author{Eren Eroğlu}
+\date{\today}
+\title{
+	\en{Formulas}
+	\tr{Formüller}
+}
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+\begin{document}
+
+\refresh
+\maketitle
+\tableofcontents
+
+\chapter{
+  \en{Geometry}
+  \tr{Geometri}
+ }
+
+\import{geometry}{ptolemys_theorem.tex}
+\import{geometry}{stewarts_theorem.tex}
+\import{geometry}{cevas_theorem.tex}
+\import{geometry}{von_aubels_theorem.tex}
+\import{geometry}{melenaus_theorem.tex}
+\import{geometry}{carnots_theorem.tex}
+\import{geometry}{law_of_sines.tex}
+\import{geometry}{law_of_cosines.tex}
+\import{geometry}{herons_theorem.tex}
+\import{geometry}{median_theorem.tex}
+\import{geometry}{inner_bisector_theorem.tex}
+\import{geometry}{exterior_bisector_theorem.tex}
+\import{geometry}{pythagorean_theorem.tex}
+\import{geometry}{euclids_theorem.tex}
+\import{geometry}{fundamental_theorem_of_similarity.tex}
+\import{geometry}{thales_theorem.tex}
+\import{geometry}{area_of_triangle.tex}
+
+\end{document}
+
